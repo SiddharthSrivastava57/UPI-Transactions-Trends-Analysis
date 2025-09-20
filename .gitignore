@@ -1,0 +1,16 @@
+# Ignore data files (often large)
+# data/raw/
+# data/processed/
+
+# Ignore Tableau extracts (very large)
+tableau/Extracts/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
