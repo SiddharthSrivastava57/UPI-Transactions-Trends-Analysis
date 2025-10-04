@@ -1,0 +1,14 @@
+# UPI Transactions Trends Analysis - Python Dependencies
+# Core data analysis libraries
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Visualization libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
