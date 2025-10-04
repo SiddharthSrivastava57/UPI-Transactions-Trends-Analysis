@@ -11,54 +11,6 @@ This project analyzes 250,000 UPI transactions from 2024 to uncover:
 - **Device & Network Analysis**: Performance metrics across different platforms
 - **Time Series Trends**: Monthly spending patterns and seasonal variations
 
-## 🗂️ Project Structure
-
-```
-UPI Transactions Trends Analysis/
-├── data/
-│   ├── raw/
-│   │   └── upi_2024.csv          # Original dataset (250K transactions)
-│   └── processed/                 # Cleaned and processed data
-├── notebooks/
-│   └── upi_project.ipynb         # Main analysis notebook
-├── sql/
-│   └── upi_sql_queries.sql       # Advanced SQL analytics queries
-├── tableau/
-│   ├── UPI_Dashboard.twb         # Interactive Tableau dashboard
-│   ├── Data/                     # Tableau data extracts
-│   └── Image/                    # Dashboard assets
-└── README.md                     # This file
-```
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8+
-- Jupyter Notebook
-- MySQL (for SQL queries)
-- Tableau Desktop (for dashboard)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd "UPI Transactions Trends Analysis"
-   ```
-
-2. **Install Python dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Launch Jupyter Notebook**
-   ```bash
-   jupyter notebook
-   ```
-
-4. **Open the analysis notebook**
-   - Navigate to `notebooks/upi_project.ipynb`
-   - Run all cells to reproduce the analysis
 
 ## 📊 Dataset Description
 
@@ -103,19 +55,17 @@ The dataset contains **250,000 UPI transactions** with the following key attribu
 
 ## 🛠️ Analysis Components
 
-### 1. **Python Analysis** (`notebooks/upi_project.ipynb`)
+### 1. **Python Analysis** 
 - Data exploration and cleaning
 - Statistical analysis
-- Visualization generation
-- Trend identification
 
-### 2. **SQL Analytics** (`sql/upi_sql_queries.sql`)
+### 2. **SQL Analytics** 
 - Advanced queries for business insights
 - Fraud pattern analysis
 - Revenue optimization queries
 - Performance metrics
 
-### 3. **Tableau Dashboard** (`tableau/UPI_Dashboard.twb`)
+### 3. **Tableau Dashboard**
 - Interactive visualizations
 - Real-time filtering
 - Executive summary views
@@ -130,49 +80,9 @@ The dataset contains **250,000 UPI transactions** with the following key attribu
 
 ## 🔧 Technical Stack
 
-- **Data Processing**: Pandas, NumPy
-- **Visualization**: Matplotlib, Seaborn, Plotly
+- **Data Processing**: Pandas
 - **Database**: MySQL
 - **Dashboard**: Tableau
 - **Development**: Jupyter Notebook, Python
-
-## 📊 Sample Queries
-
-### Top Revenue by State
-```sql
-SELECT sender_state, merchant_category, SUM(amount) as revenue
-FROM upi 
-GROUP BY sender_state, merchant_category
-ORDER BY revenue DESC;
-```
-
-### Fraud Analysis by Age Group
-```sql
-SELECT sender_age_group, 
-       COUNT(*) as total_txns,
-       SUM(fraud_flag) as fraud_count,
-       ROUND(SUM(fraud_flag) * 100.0 / COUNT(*), 2) as fraud_rate
-FROM upi 
-GROUP BY sender_age_group;
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is for educational and portfolio purposes.
-
-## 👨‍💻 Author
-
-**Siddharth Srivastava**
-- Data Analytics Portfolio Project
-- August 2024
-
----
 
 *For detailed analysis and interactive dashboards, please refer to the Jupyter notebook and Tableau workbook.*
